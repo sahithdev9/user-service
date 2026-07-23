@@ -9,6 +9,7 @@ phases:
     commands:
       - cd complete
       - chmod +x mvnw
+      - chmod +x scripts/*.sh
       - ./mvnw clean package
 
 artifacts:
