@@ -1,0 +1,18 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      java: corretto17
+
+  build:
+    commands:
+      - cd complete
+      - chmod +x mvnw
+      - ./mvnw clean package
+
+artifacts:
+  files:
+    - complete/target/*.jar
+    - complete/appspec.yml
+    - complete/scripts/**/*
