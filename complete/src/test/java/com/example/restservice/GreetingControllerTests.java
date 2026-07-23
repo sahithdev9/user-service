@@ -21,7 +21,7 @@ public class GreetingControllerTests {
         .exchange()
         .expectStatus().isOk()
         .expectBody()
-        .jsonPath("$.content").isEqualTo("Hello, World!");
+        .jsonPath("$.content").isEqualTo("Hello, Team!");
   }
 
   @Test
@@ -32,7 +32,7 @@ public class GreetingControllerTests {
         .exchange()
         .expectStatus().isOk()
         .expectBody()
-        .jsonPath("$.content").isEqualTo("Hello, Spring Community!");
+        .jsonPath("$.content").isEqualTo("Hello, Team!");
   }
 
 }
