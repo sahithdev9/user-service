@@ -1,10 +1,11 @@
 #!/bin/bash
+set -e
 
 echo "===== Validating Application ====="
 
 sleep 15
 
-PID=$(pgrep -f app.jar)
+PID=$(pgrep -f "rest-service-complete-0.0.1-SNAPSHOT.jar")
 
 if [ -z "$PID" ]; then
     echo "Application failed to start."
