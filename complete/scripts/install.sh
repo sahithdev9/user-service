@@ -1,12 +1,17 @@
 #!/bin/bash
+
 set -e
 
 echo "===== Install Phase Started ====="
 
-sudo mkdir -p /home/ec2-user/user-service
+APP_DIR=/home/ec2-user/user-service
+
+mkdir -p "$APP_DIR"
 
 JAR=$(find target -name "*.jar" | head -1)
 
-sudo cp "$JAR" /home/ec2-user/user-service/app.jar
+cp "$JAR" "$APP_DIR/app.jar"
+
+echo "JAR copied successfully."
 
 echo "===== Install Phase Completed ====="
