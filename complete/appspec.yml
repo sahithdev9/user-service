@@ -9,19 +9,15 @@ hooks:
   ApplicationStop:
     - location: scripts/stop.sh
       timeout: 300
-      runas: ec2-user
 
   BeforeInstall:
     - location: scripts/install.sh
       timeout: 300
-      runas: ec2-user
 
   ApplicationStart:
     - location: scripts/start.sh
       timeout: 300
-      runas: ec2-user
 
   ValidateService:
     - location: scripts/validate.sh
       timeout: 300
-      runas: ec2-user
