@@ -11,10 +11,10 @@ pkill -f "java -jar" || true
 
 JAR=$(ls rest-service-complete-*.jar | head -1)
 
+echo "Starting $JAR"
+
 nohup java -jar "$JAR" > application.log 2>&1 &
 
 sleep 10
-
-echo "Application started successfully."
 
 echo "===== Start Completed ====="
